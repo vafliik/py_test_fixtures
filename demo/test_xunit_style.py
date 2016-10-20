@@ -1,22 +1,22 @@
 def setup_module(module):
-    print('\nSetting up module: {}'.format(module))
+    print('\n========== Setting up module: {}'.format(module))
 
 
 def teardown_module(module):
-    print('\nTearing down module: {}'.format(module))
+    print('\n========== Tearing down module: {}'.format(module))
 
 
 def setup_function(function):
-    print('\nSetting up function: {}'.format(function))
+    print('\n===== Setting up function: {}'.format(function))
 
 
 def teardown_function(function):
-    print('\nTearing down function: {}'.format(function))
+    print('\n===== Tearing down function: {}'.format(function))
 
 
 def test_1():
     print('>>> TEST 1 - Actually doing some testing ')
-    assert 1 == 1
+    assert 1 == 2
 
 
 def test_2():
@@ -26,17 +26,17 @@ def test_2():
 class TestClass:
     @classmethod
     def setup_class(cls):
-        print('\nSetting up class: {}'.format(cls))
+        print('\n======= Setting up class: {}'.format(cls))
 
     @classmethod
     def teardown_class(cls):
-        print('\nTearing down class: {}'.format(cls))
+        print('\n======= Tearing down class: {}'.format(cls))
 
     def setup_method(self, method):
-        print('\nSetting up method: {}'.format(method))
+        print('\n===== Setting up method: {}'.format(method))
 
     def teardown_method(self, method):
-        print('\nTearing down up method: {}'.format(method))
+        print('\n===== Tearing down up method: {}'.format(method))
 
     def test_3(self):
         print('>>> TEST 3 - Testing in class ')

@@ -14,6 +14,6 @@ http://doc.pytest.org/en/latest/xunit_setup.html#xunitsetup
 * Class level setup/teardown
 * Method and function level setup/teardown
 
-[Demo](xunit_style.py)
+[Demo](demo/test_xunit_style.py)
 
 pytest and xunit can mix together 
