@@ -99,5 +99,23 @@ def my_session_resource():
 
 [Demo](demo/test_pytest_scope.py)
 
+## Class level definition
+If you need to use fixture for the execution of each test method in class, you can either add it as parameter to each method, or use * usefixtures* annotation.
 
+```python
+@pytest.mark.usefixtures("my_fixture", "another_fixture")
+class MyTestClass:
+
+    def test_1(self):
+        pass
+        
+    def test_2(self, yet_another_fixture):
+        pass
+```
+
+Both test methods in the example will use *"my_fixture"* and *"another_fixture"*, second test will use extra *"yet_another_fixture"*
+
+As expected, the **scope** of the fixtures will be applied.  
+
+[Demo](demo/test_pytest_class_level.py)
 
