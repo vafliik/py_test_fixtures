@@ -74,6 +74,22 @@ def cleanup():
 
 [Demo](demo/test_pytest_problem_solution2.py)
 
+## Scope
+Make sure your fixtures will run only when you need it. You have a fixture that you need to run once per class, or test session?
+You have many test and are not sure which test are using it? Here is **scope** parameter to help you!
+
+```python
+@pytest.fixture(scope='session')
+def my_session_resource():
+    # setup precious resource for the whole test session
+    print('Setting up kryptonite')
+    yield my_session_resource
+    # cleanup after the testing is done
+    print('Cleaning after test sessison')
+```
+
+[Demo](demo/test_pytest_scope.py)
+
 
 pytest and xunit can mix together
 
