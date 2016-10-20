@@ -78,6 +78,15 @@ def cleanup():
 Make sure your fixtures will run only when you need it. You have a fixture that you need to run once per class, or test session?
 You have many test and are not sure which test are using it? Here is **scope** parameter to help you!
 
+| Scope        | Meaning           |
+| ------------- |:-------------|
+| **function** |	Run once per test |
+| **class** |	Run once per class of tests |
+| **module** |	Run once per module |
+| **session** |	Run once per session |
+
+**Example**
+
 ```python
 @pytest.fixture(scope='session')
 def my_session_resource():
@@ -90,7 +99,5 @@ def my_session_resource():
 
 [Demo](demo/test_pytest_scope.py)
 
-
-pytest and xunit can mix together
 
 
