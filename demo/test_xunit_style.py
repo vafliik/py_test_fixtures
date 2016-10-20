@@ -16,7 +16,7 @@ def teardown_function(function):
 
 def test_1():
     print('>>> TEST 1 - Actually doing some testing ')
-    assert 1 == 2
+    assert 1 == 1
 
 
 def test_2():
@@ -43,5 +43,5 @@ class TestClass:
         assert "This" == "This"
 
     def test_4(self):
-        print('>>> TEST 4 - Me like testing in lass ')
+        print('>>> TEST 4 - Me like testing in class ')
         assert "This" != "That"
